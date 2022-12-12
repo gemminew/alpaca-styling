@@ -1,0 +1,37 @@
+.general-layout{
+  display: flex;
+    width: 100vh;
+}
+
+.alpaca-image {
+    flex: 70%;
+    padding: 1em;
+}
+
+.fake-img {
+    height: 200px;
+    width: 500px;
+    background-color: aqua;
+    padding: 20px;
+    margin: 15px;
+}
+
+.options {
+    flex: 30%;
+    padding: 20px;
+}
+
+.accesories {
+    margin: 10px;
+}
+
+.style {
+    margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .general-layout {   
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
