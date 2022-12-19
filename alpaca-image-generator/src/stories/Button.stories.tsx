@@ -18,11 +18,9 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   label: 'Button',
-  selected: false
 }
 
 export const Selected = Template.bind({});
 Selected.args = {
   label: 'Button',
-  selected: true
 };

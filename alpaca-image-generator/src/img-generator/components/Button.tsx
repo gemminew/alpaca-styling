@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { useDetectSelectedButton } from '../hooks';
 import './button.css';
 
 interface ButtonProps {
@@ -30,19 +31,18 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
 
-  const [ selectedBtn, setSelectedBtn ] = useState(false);
-  const btnSelected = () => setSelectedBtn( !selected );
-
   const btnRef = useRef(null);
+  const [ selectedBtn, setSelectedBtn ] = useDetectSelectedButton(btnRef, false);
+  const btnSelected = () => setSelectedBtn( !selectedBtn );
 
-  const mode = selected || selectedBtn ? 'storybook-button--selected' : 'storybook-button';
+  console.log(btnRef)
   
   return (
     <button
       ref={btnRef}
       onClick={btnSelected}
       type="button"
-      className={['storybook-button', mode].join(' ')}
+      className={`storybook-button${selectedBtn || selected? '--selected' : ''}`}
       style={{ backgroundColor }}
       {...props}
     >

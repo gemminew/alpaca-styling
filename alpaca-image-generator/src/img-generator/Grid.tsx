@@ -21,7 +21,7 @@ export const Grid = () => {
           <div className="accesories">
             <h3>ACCESORIZE THE ALPACA</h3>
               { btnLabel.map( label => (
-                <Button label={ label } />
+                <Button key={label} label={ label } />
               ) )}
           </div>
           <div className="style">
