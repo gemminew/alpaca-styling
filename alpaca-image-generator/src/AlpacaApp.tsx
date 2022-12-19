@@ -1,11 +1,12 @@
-import { Grid } from "./Grid/Grid"
+import { Grid } from "./img-generator/Grid"
 
 const AlpacaApp = () => {
   return (
-    <div className="container-app">
-      <h1>ALPACA GENERATOR</h1>
-      <Grid></Grid>
-    </div> 
+    <>
+      <div className="container-app">
+        <Grid></Grid>
+      </div> 
+    </>
   )
 }
 

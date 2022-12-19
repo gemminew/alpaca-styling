@@ -1,28 +1,38 @@
+.grid-container {
+    justify-content: center;
+}
+
 .general-layout{
-  display: flex;
-    width: 100vh;
+    display: flex;
+    background-color: rgb(226, 223, 223);
+    width: 80%;
+    height: 60%;
 }
 
 .alpaca-image {
-    flex: 70%;
+    flex: 60%;
     padding: 1em;
 }
 
 .fake-img {
-    height: 200px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     background-color: aqua;
     padding: 20px;
     margin: 15px;
 }
 
 .options {
-    flex: 30%;
+    flex: 40%;
     padding: 20px;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .accesories {
     margin: 10px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .style {

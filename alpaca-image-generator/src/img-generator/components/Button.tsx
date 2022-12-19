@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import './button.css';
 
 interface ButtonProps {
@@ -23,14 +24,23 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  selected = false,
+  selected,
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = selected ? 'storybook-button--selected' : 'storybook-button';
+
+  const [ selectedBtn, setSelectedBtn ] = useState(false);
+  const btnSelected = () => setSelectedBtn( !selected );
+
+  const btnRef = useRef(null);
+
+  const mode = selected || selectedBtn ? 'storybook-button--selected' : 'storybook-button';
+  
   return (
     <button
+      ref={btnRef}
+      onClick={btnSelected}
       type="button"
       className={['storybook-button', mode].join(' ')}
       style={{ backgroundColor }}

@@ -6,6 +6,7 @@
   cursor: pointer;
   display: inline-block;
   padding: .5rem 1.5rem;
+  margin: .2rem;
   /* line-height: 1; */
   background-color: transparent;
   border: 2px rgb(120, 183, 255) solid;
@@ -15,7 +16,8 @@
 .storybook-button--selected {
   color: #ffffff;
   background-color:rgb(6, 74, 152);
-  border: 1px rgb(6, 74, 152) solid;
+  /* border: 1px rgb(6, 74, 152) solid; */
+  border: 2px rgb(6, 74, 152) solid;
 }
 
 
