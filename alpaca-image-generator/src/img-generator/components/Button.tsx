@@ -33,14 +33,14 @@ export const Button = ({
 
   const btnRef = useRef(null);
   const [ selectedBtn, setSelectedBtn ] = useDetectSelectedButton(btnRef, false);
-  const btnSelected = () => setSelectedBtn( !selectedBtn );
+  // const btnSelected = () => setSelectedBtn( true );
 
   console.log(btnRef)
   
   return (
     <button
       ref={btnRef}
-      onClick={btnSelected}
+      onClick={() => setSelectedBtn( true )}
       type="button"
       className={`storybook-button${selectedBtn || selected? '--selected' : ''}`}
       style={{ backgroundColor }}
